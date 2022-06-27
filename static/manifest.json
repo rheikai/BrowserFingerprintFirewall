@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "BrowserFingerprintFirewall",
+  "version": "1.0.0",
+  "description": "A firefox extension to block JavaScripts which collect browser fingerprint",
+  "icons": {
+    "48": "icon48x48.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": [
+      "main.js",
+      "signatures.js"
+    ]
+  }
+}

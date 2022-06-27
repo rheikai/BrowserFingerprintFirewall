@@ -1,0 +1,16 @@
+{
+    "name": "browserfingerprintfirewall",
+    "version": "1.0.0",
+    "browserslist": [
+        "defaults"
+    ],
+    "scripts": {
+        "build:dev": "rm -rf ./build && cp -r ./static ./build && npm install && python3 signatures/construct_signatures.ts.py && tsc -p tsconfig.json",
+        "build:release": "npm run build:dev"
+    },
+    "devDependencies": {
+        "@types/firefox-webext-browser": "^94.0.1",
+        "typescript": "^4.6.4"
+    },
+    "dependencies": {}
+}
